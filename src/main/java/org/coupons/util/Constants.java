@@ -17,4 +17,6 @@ public interface Constants {
 	long	ACCESS_DURATION_IN_MINUTES	= 10;
 	long	REFRESH_DURATION_IN_MINUTES	= 10 * 24 * 60;
 	String	JWT_ISSUER					= "Nick.org";
+	
+	String STATUS_MISSING_AUTH_TOKEN = "ERR10002";
 }

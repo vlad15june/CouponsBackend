@@ -1,0 +1,21 @@
+# 20000-29999 common error codes within your business domain.
+# It is highly recommended to have your error code shared within your organization or your line of business.
+# In that case, all your services can share the same status.yml which in org default config
+
+
+# 90000-99999 customize error code that cannot be found in common range.
+# Only use this section if you cannot make your error code into 20000-29999 range on time.
+# In this case, you have to overwrite your status.yml per service.
+
+
+ERR10000:
+  statusCode: 401
+  code: ERR10000
+  message: INVALID_AUTH_TOKEN
+  description: Incorrect signature or malformed token in authorization header
+ERR10001:
+  statusCode: 401
+  code: ERR10001
+  message: AUTH_TOKEN_EXPIRED
+  description: Jwt token in authorization header expired
+  

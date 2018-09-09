@@ -23,13 +23,9 @@
     </div>
 	</form>
 
-<p id="demo"></p>
-
-
 <script>
 
 //Sending and receiving data in JSON format using POST method
-//
 function login() {
 	
 	var form = document.getElementById("LoginForm");
@@ -49,22 +45,7 @@ function login() {
 	var data = JSON.stringify({"email": email, "password": pw});
 	xhr.send(data);
 }
-/*
-function login() {
-	var form = document.getElementById("LoginForm");
-    var un = form.email.value;
-    var pw = form.password.value;	
-	
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("POST", "http://localhost:8082/coupons/login", true);
-  xhttp.send();
-}
-*/
+
 </script>
 
 </body>
