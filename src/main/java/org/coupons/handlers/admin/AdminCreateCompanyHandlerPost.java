@@ -31,9 +31,12 @@ public class AdminCreateCompanyHandlerPost implements HttpHandler {
 		final String json = mapper.writeValueAsString(s);
 		final Company company = mapper.readValue(json, Company.class);
 
-		final JSONObject jsonObj = JSONConvertor.companyToJSON(AdminFacade.addCompany(company, payload));
-
-		exchange.getResponseSender().send(jsonObj.toJSONString());
+		//TODO: open it
+		// final JSONObject jsonObj = JSONConvertor.companyToJSON(AdminFacade.addCompany(company, payload));
+		//exchange.getResponseSender().send(jsonObj.toJSONString());
+		
+		//TODO: remove it
+		exchange.getResponseSender().send("AdminCreateCompanyHandlerPost");
 	}
 
 }

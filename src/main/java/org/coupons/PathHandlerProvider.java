@@ -91,6 +91,5 @@ public class PathHandlerProvider implements HandlerProvider {
 		.add(Methods.POST, "/coupons/company", new CompanyCreateCouponHandlerPost())
 		.add(Methods.PUT, "/coupons/company", new CompanyUpdateCouponHandlerPut())
 		.add(Methods.DELETE, "/coupons/company", new CompanyRemoveCouponHandlerDelete());
-
 	}
 }

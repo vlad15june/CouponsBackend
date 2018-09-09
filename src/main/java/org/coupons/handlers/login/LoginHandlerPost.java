@@ -33,17 +33,27 @@ public class LoginHandlerPost implements HttpHandler {
 		JsonElement email = requestBody.get(EMAIL);
 		JsonElement password = requestBody.get(PASSWORD);
 
-		if (UserDAO.isUserExists(email, password)) {
+		//TODO: open it
+//		if (UserDAO.isUserExists(email, password)) {
+		
+		//TODO: remove it
+		if(true) {
 			String jwtId = UUID.randomUUID().toString();
 			otherClaimsHeader.put("jti", jwtId); // "jti" (JWT ID) Claim
 			
-			String userId = UserDAO.getUserId(email.getAsString().trim());
+			//TODO: open it
+			//String userId = UserDAO.getUserId(email.getAsString().trim());
+			
+			//TODO: remove it
+			String userId = "userId";
+			
 			otherClaimsPayload.put("userId", userId);
 			
 			TokenContainer tokenContainer = AuthHelper.jwtGenerator(email.getAsString(), otherClaimsHeader,
 					otherClaimsPayload);
 
-			JwtDAO.addToken(tokenContainer, jwtId);
+			//TODO: open it
+			//JwtDAO.addToken(tokenContainer, jwtId);
 
 			exchange.getResponseHeaders().add(new HttpString("Authorization"), tokenContainer.toJsonString());
 			exchange.getResponseSender().send("Login Handler Works (POST)" + requestBody);
